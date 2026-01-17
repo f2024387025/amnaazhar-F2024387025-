@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+
+.wrapper {
+    display: flex;
+    min-height:90vh;
+}
+
+/* =====================
+   Sidebar
+===================== */
+.sidebar {
+    width: 260px;
+    background: #1f2933;
+    color: #fff;
+    padding: 30px 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.profile-img {
+    width:200px;
+    height: 150px;
+    border-radius:60%;
+    display: block;
+    margin: 0 auto 30px;
+    border: 3px solid #0b0e0f;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.menu li {
+    margin:1px;
+}
+
+.menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #023e57;
+    color: #0f172a;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top:1px;
+    text-align:center
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #38bdf8;
+}
+
+/* =====================
+   Main Content
+===================== */
+.content {
+    margin-left: 260px;
+    padding: 40px;
+    width: 100%;
+}
+
+/* =====================
+   Home Section
+===================== */
+.home {
+    background: linear-gradient(135deg, #022432, #042331);
+    color: #fff;
+    padding:30px 40px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.home h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.home p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background: #0f172a;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #020617;
+}
+
+/* =====================
+   Sections
+===================== */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #0f172a;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #022f43;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+/* =====================
+   Boxes (Education, Experience)
+===================== */
+.box {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.box h3 {
+    font-size: 18px;
+    color: #0f172a;
+}
+
+.box span {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.box p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* =====================
+   Skills
+===================== */
+#skills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+#skills li {
+    background: #125c8e;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #0f172a;
+    text-align: center;
+}
+
+/* =====================
+   Contact Form
+===================== */
+form {
+    max-width: 600px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+}
+
+form textarea {
+    resize: none;
+    height: 120px;
+}
+
+form button {
+    border: none;
+    cursor: pointer;
+}
+
+/* =====================
+   Footer
+===================== */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 900px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .home {
+        text-align: center;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <img src="https://plus.unsplash.com/premium_photo-1673796984325-c4620a07b57d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bm8lMjBmYWNlJTIwZ2lybHxlbnwwfHwwfHx8MA%3D%3D"class="profile-img" alt="Profile">
+
+        <ul class="menu">
+            <li><a href="#home">Home <i class="fa fa-home"></i></a></li>
+            <li><a href="#about">Bio <i class="fa fa-user"></i></a></li>
+            <li><a href="#education">Education <i class="fa fa-graduation-cap"></i></a></li>
+            <li><a href="#skills">Skills <i class="fa fa-tools"></i></a></li>
+            <li><a href="#experience">Experience & Projects <i class="fa fa-briefcase"></i></a></li>
+            <li><a href="#contact">Contact <i class="fa fa-envelope"></i></a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <!-- Home / Bio -->
+        <section id="home" class="home">
+            <h1>Amna Azhar</h1>
+            <p>Frontend Web Developer</p>
+            <a href="#" class="btn">Download Resume</a>
+        </section>
+
+        <!-- About / Bio -->
+        <section id="about">
+            <h2>Bio</h2>
+            <p>
+                My name is Amna Azhar. I am a dedicated Frontend Web Developer
+                with hands on experience in HTML, CSS, and JavaScript.
+                I enjoy learning new technologies and building creative web projects.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <h2>Education</h2>
+
+            <div class="box">
+                <h3>ADP in Computer Science</h3>
+                <span>2024 – 2026</span>
+                <p>
+                    UMT(University of Management and Technology) University, Pakistan <br>
+                    Major subjects: Programming, Web Development, Databases
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>Intermediate (ICS)</h3>
+                <span>2022– 2024</span>
+                <p>Unique College</p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5 & CSS</li>
+                <li>JavaScript</li>
+                <li>Basic Django</li>
+                <li>Git & GitHub</li>
+                <li>Responsive Web Design</li>
+                <li>Problem Solving</li>
+            </ul>
+        </section>
+
+        <!-- Experience & Projects -->
+        <section id="experience">
+            <h2>Experience & Projects</h2>
+
+            <div class="box">
+                <h3>Frontend Developer (Academic)</h3>
+                <span>2023 – Present</span>
+                <p>
+                    Developed multiple academic projects including
+                    personal portfolio websites and responsive landing pages.
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>Personal Portfolio Website</h3>
+                <span>Project</span>
+                <p>
+                    Designed and developed a personal portfolio using
+                    HTML, CSS, and JavaScript to showcase skills and projects.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Message"></textarea>
+                <button class="btn">Send</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>©Amna Azhar 2026 Portfolio Website</p>
+        </footer>
+
+    </main>
+</div>
+</body>
+<script src="func.js"></script>
+</html>
